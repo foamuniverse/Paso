@@ -1,4 +1,4 @@
-# Paso
+# Proof of Walk 
 
 Proof of Walk: a consensus mechanism in which the scarce resource securing the network is authenticated human walk-like locomotion time.
 
