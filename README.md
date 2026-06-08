@@ -1,6 +1,6 @@
 # Proof of Walk 
 
-Proof of Walk: a consensus mechanism in which the scarce resource securing the network is authenticated human walk-like locomotion time.
+Paso: a consensus mechanism in which the scarce resource securing the network is authenticated human walk-like locomotion time.
 
 This repository contains the protocol specification.
 
