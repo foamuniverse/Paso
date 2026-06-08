@@ -2,11 +2,11 @@
 
 Proof of Walk: a consensus mechanism in which the scarce resource securing the network is authenticated human walk-like locomotion time.
 
-This repository contains the protocol specification. It is a design document, not an implementation.
+This repository contains the protocol specification.
 
 ## Summary
 
-Existing consensus mechanisms allocate block production by expenditure of a scarce, accumulable resource — computation (PoW), capital (PoS), storage (PoSpace) — all of which concentrate through economies of scale. Walking time does not accumulate: biological limits cap it per person per day, and capital does not raise that cap. Proof of Walk uses it as the consensus resource, distributing block production more equally than prior mechanisms.
+Existing consensus mechanisms allocate block production rights by expenditure of a scarce, accumulable resource — computation (PoW), capital (PoS), storage (PoSpace) — all of which concentrate through economies of scale. Walking time does not accumulate: biological limits cap it per person per day, and capital does not raise that cap. Proof of Walk uses it as the consensus resource, distributing block production more equally than prior mechanisms.
 
 The transaction layer is inherited from Chia — the coinset puzzle model and CLVM. Chia's proof-of-space-plus-VDF consensus is replaced with proof-of-walk. Continuous attested locomotion supplies the wall-clock anchor a VDF would otherwise provide.
 
