@@ -1,54 +1,24 @@
-# Proof of Walk 
+# Proof of Walk
+ 
+A consensus mechanism in which the scarce resource securing the network is verified locomotion.
+ 
+This repository holds the protocol specification and design rationale.
+ 
+Proof of Walk is meant to be a drop-in replacement for Proof of Work. It keeps the Nakamoto-style structure — permissionless, lottery-based block production over a stateless coin layer — and swaps the resource: locomotion over time. A device gathering verified, continuously attested locomotion is eligible to produce a block; one eligible device is selected each interval by chain-derived randomness.
+ 
+Biological locomotion which is assumed to be normally walking but could be running, or in principle the trot of a pet if a user decided to strap their phone to it, is the Sybil-resistant cost of participating in consensus. The block reward exists to motivate people to contribute that security. The purpose of the locomotion is to secure a distributed ledger.
+ 
+Walking is biologically capped: the time one body can spend in walking-like locomotion is bounded by the hours in a day, so block production resists the economies of scale and capital concentration that centralize other mechanisms. If the user decides to run or crawl instead, this changes absolutely nothing as long as the motion classifier covers those movement modalities.
+ 
+## Verification, emission, and Sybil resistance
+ 
+Proof of Walk is a consensus mechanism to secure a distributed eventually consistent transactional ledger, aka a blockchain. Hardware attestation, an on-chain locomotion classifier, and Bluetooth proximity checks are consensus rules. Emission is metered by time. Proof of Walk mints a fixed quantity per unit of wall-clock time, independent of participant count. Increased user adoption dilutes each walker's share, and so would a successful spoofing attack which means until the attack reaches a majority, which is catastrophic in any Nakamoto style distributed ledger, the results is just unfair distribution of newly minted tokens.
 
-Paso: a consensus mechanism in which the scarce resource securing the network is authenticated human walk-like locomotion time.
-
-This repository contains the protocol specification.
-
-## Summary
-
-Existing consensus mechanisms allocate block production rights by expenditure of a scarce, accumulable resource — computation (PoW), capital (PoS), storage (PoSpace) — all of which concentrate through economies of scale. Walking time does not accumulate: biological limits cap it per person per day, and capital does not raise that cap. Proof of Walk uses it as the consensus resource, distributing block production more equally than prior mechanisms.
-
-The transaction layer is inherited from Chia — the coinset puzzle model and CLVM. Chia's proof-of-space-plus-VDF consensus is replaced with proof-of-walk. Continuous attested locomotion supplies the wall-clock anchor a VDF would otherwise provide.
-
-## Trust model
-
-Not trustless. Sensor integrity depends on the hardware attestation of mobile platform vendors (Play Integrity, App Attest). Block production is restricted to project-signed binaries via an on-chain signing key. Both the signing key and the locomotion classifier are consensus parameters and remain so indefinitely. These dependencies are stated rather than obscured; see §3.
-
-## Mechanism
-
-- **Activity detection.** Binary classification of locomotion vs. rest from accelerometer and gyroscope data.
-- **On-chain classifier.** The definition of locomotion is published on-chain so every device classifies against the same definition; platform classifiers are not consensus-safe because vendors can change them independently. Classifier updates are consensus changes.
-- **Sybil resistance.** Two layers. (1) Hardware attestation guarantees sensor data is not fabricated. (2) Bluetooth locomotion-cycle synchronization detects multiple devices on one body — they register identical cycle intervals — and invalidates them, enforcing one-body-one-share. Economic infeasibility (below) backs this against hardware evasion.
-- **Consensus.** Any device in verified, continuously attested locomotion is eligible at each block interval; one is selected by chain-derived verifiable randomness, uniformly among eligible devices. Live nodes only; offline locomotion is not credited.
-- **No identity, no biometric registration, no onboarding** beyond installing the gathering application. No personal data collected.
-
-## Parameters
-
-| | |
-|---|---|
-| Block interval | 18 s |
-| Block reward | 2 pasos (no halving) |
-| Emission | 9,600 pasos/day, fixed and perpetual; inflation declines asymptotically |
-| Smallest unit | 1 pasito = 10⁻¹² paso; integer arithmetic throughout |
-| Block capacity | bounded by what the cheapest attested device validates within the interval |
-
-Expected per-device daily return is `R = (9,600 × P) / N` for token price `P` and `N` active gatherers. A faster phone does not gather faster; returns scale linearly with device count, with no economies of scale, which is what makes mechanical spoofing irrational rather than impossible.
-
-## Known limitations
-
-- Trust dependency on platform attestation infrastructure (§3.5, §3.6).
-- Mechanical spoofing is economically deterred, not prevented (§6, Appendix A).
-- Higher orphan rate than wired-node chains, accepted as the cost of cellular operation (§5.2).
-- Wheelchair and other non-walking locomotion are out of scope at launch; the classifier and platform mechanisms are extensible to other periodic human-powered motion and device classes (§7).
-
-## Contents
-
-- `paso_consensus_v4.md` — current specification.
-
+## Precedent
+ 
+Proof of Walk inherits its structure from Bitcoin and Proof of Work, including the principle that the right to produce a block is bought with expended, non-purchasable effort. Move-to-earn applications demonstrated a real, large appetite for walking-for-tokens, but showed simultaneous how that appetite is wasted when token supply is proportional to activity rather than fixed supply + stochastic, and left to inflate.
+ 
 ## Status
-
-Specification stage. The consensus mechanism is unimplemented. The hard problems — bit-exact classifier determinism across heterogeneous sensors, the adversarial security of Bluetooth proximity synchronization, and the leader-election/fork-choice coupling — are open and unverified.
-
-## Prior art
-
-Builds on Bitcoin (Nakamoto), the Chia coinset model and CLVM (Cohen), and the COVID contact-tracing proximity protocols that establish Bluetooth cycle-detection as practical.
+ 
+Specification stage. Transaction and execution layer are a separable, best-of-breed choice. The consensus mechanism is unimplemented, and wants adversarial review by other humans.
+ 
