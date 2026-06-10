@@ -16,7 +16,7 @@ Proof of Walk is a consensus mechanism to secure a distributed eventually consis
 
 ## Precedent
  
-Proof of Walk inherits its structure from Bitcoin and Proof of Work, including the principle that the right to produce a block is bought with expended, non-purchasable effort. Move-to-earn applications demonstrated a real, large appetite for walking-for-tokens, but showed simultaneous how that appetite is wasted when token supply is proportional to activity rather than fixed supply + stochastic, and left to inflate.
+Proof of Walk inherits its structure from Bitcoin and Proof of Work, including the principle that the right to produce a block is bought with expended effort. Move-to-earn applications demonstrated a real, large appetite for walking-for-tokens, but showed simultaneous how that appetite is wasted when token supply is proportional to activity rather than fixed supply + stochastic, and left to inflate.
  
 ## Status
  
