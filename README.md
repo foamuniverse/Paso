@@ -1,6 +1,6 @@
 # Proof of Walk
  
-A consensus mechanism in which the scarce resource securing the network is verified locomotion.
+A consensus mechanism in which the scarce resource securing the network is verified human walk-like locomotion.
  
 This repository holds the protocol specification and design rationale.
  
@@ -8,7 +8,7 @@ Proof of Walk is meant to be a drop-in replacement for Proof of Work. It keeps t
  
 Biological locomotion which is assumed to be normally walking but could be running, or in principle the trot of a pet if a user decided to strap their phone to it, is the Sybil-resistant cost of participating in consensus. The block reward exists to motivate people to contribute that security. The purpose of the locomotion is to secure a distributed ledger.
  
-Walking is biologically capped: the time one body can spend in walking-like locomotion is bounded by the hours in a day, so block production resists the economies of scale and capital concentration that centralize other mechanisms. If the user decides to run or crawl instead, this changes absolutely nothing as long as the motion classifier covers those movement modalities.
+Walking is biologically capped: the time one body can spend in walk-like locomotion is bounded by the hours in a day, so block production resists the economies of scale and capital concentration that centralize other mechanisms.
  
 ## Verification, emission, and Sybil resistance
  
