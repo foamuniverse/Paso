@@ -20,5 +20,5 @@ Proof of Walk inherits its structure from Bitcoin and Proof of Work, including t
  
 ## Status
  
-Specification stage. Transaction and execution layer are an open best-of-breed choice. The consensus mechanism is unimplemented, and wants adversarial review by other humans.
+Specification stage. Transaction and execution layer are an open best-of-breed choice. The consensus mechanism is unimplemented, and wants human adversarial review.
  
