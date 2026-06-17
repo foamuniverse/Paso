@@ -4,9 +4,9 @@ A consensus mechanism in which the scarce resource securing the network is verif
  
 This repository holds the protocol specification and design rationale.
  
-Proof of Walk is meant to be a drop-in replacement for Proof of Work. It keeps the Nakamoto-style structure — permissionless, lottery-based block production over a stateless coin layer — and swaps the resource: locomotion over time. A device gathering verified, continuously attested locomotion is eligible to produce a block; one eligible device is selected each interval by chain-derived randomness.
+Proof of Walk is meant to be a drop-in replacement for Proof of Work. It keeps the Nakamoto-style structure — permissionless, lottery-based block production over a stateless coin layer — and swaps the resource: locomotion over time.
  
-Biological locomotion which is assumed to be normally walking but could be running, or in principle the trot of a pet if a user decided to strap their phone to it, is the Sybil-resistant cost of participating in consensus. The block reward exists to motivate people to contribute that security. The purpose of the locomotion is to secure a distributed ledger.
+Biological locomotion which is assumed to be normally walking but could be running — or in principle the trot of a pet if a user went to strap their phone to it and the motion classifier was extended to include the pet's motion pattern — is the Sybil-resistant cost of participating in consensus. The block reward exists to motivate people to contribute that security. The purpose of the locomotion is to secure a distributed ledger.
  
 Walking is biologically capped: the time one body can spend in walk-like locomotion is bounded by the hours in a day, so block production resists the economies of scale and capital concentration that centralize other mechanisms.
  
